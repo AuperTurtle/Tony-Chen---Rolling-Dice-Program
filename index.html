@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function rollDice() {
+            diceDiv = document.getElementById("diceSummary");
+            var diceOne = Math.floor(Math.random() * 6) + 1
+            var diceTwo = Math.floor(Math.random() * 6) + 1
+            var total = diceOne + diceTwo
+            diceDiv.innerHTML = "Dice 1: " + diceOne + "<br>Dice 2: " + diceTwo + "<br>Combined total of the dice: " + total
+        }
+    </script>
 </head>
 <body>
-    
+    <h1> <strong> Rolling Dice Program </strong ></h1>
+    <div id = diceSummary>
+    <p> Dice 1: </p>
+    <p> Dice 2: </p>
+    <p> Combined total of the dice: </p>
+    </div>
 </body>
+    <button onclick = rollDice();> Roll the Dice! </button>
 </html>
